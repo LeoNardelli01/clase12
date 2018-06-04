@@ -72,6 +72,7 @@
 
 		let habitaciones = document.querySelectorAll('.habitacion');
 		let select = document.querySelector("select");
+
 		let limpiar = function(){
 			for	(var i = 0; i < habitaciones.length; i++) {
 			habitaciones[i].classList.add("esconder");
@@ -80,8 +81,9 @@
 
 		function mostrarOpcion(){
 			limpiar();
-			var opcion = select.selectedIndex -1;
+
 			if(select.value != 0){
+				var opcion = select.selectedIndex -1;
 				habitaciones[opcion].classList.remove("esconder");
 			}
 		}
